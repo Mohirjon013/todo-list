@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+    <style>
+        body{
+            background-color: #24BAFF;
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="w-[800px] pb-[15px] bg-white mx-auto mt-[80px] rounded-lg">
+        <form class="todo-form pt-[30px]">
+            <div class="  w-[180px] flex items-center gap-[10px] mx-auto ">
+                <h1 class="text-[#002765] font-bold text text-[20px]">To - Do List</h1>
+                <img width="50"  src="./images/todo.png" alt="">
+            </div>
+            <label class="w-[400px] relative mt-[10px] mx-auto bg-gray-300 focus:shadow-sm focus:shadow-gray-500 border flex items-center justify-between rounded-[30px]">
+                <input class="todo-input w-[300px] py-[10px] pl-[15px] pr-[8px] bg-transparent outline-none text-zinc-700 " type="text" placeholder="Add your text">
+                <button class=" w-[100px] py-[10px] rounded-[30px] bg-sky-500 text-white">Add</button>
+            </label>
+        </form>
+
+        <ul class="todo-list w-[500px] space-y-5 p-3 bg-slate-300 mx-auto mt-5 rounded-[30px]">
+            <!-- <li class="flex bg-white rounded-[30px] p-2 items-center justify-between">
+                
+                
+            </li> -->
+
+            
+        </ul>
+
+        <div id="wrapper" class="modul-wrapper fixed flex items-center justify-between top-0 bottom-0 left-0 right-0 backdrop-blur duration-300 scale-0">
+            <div class="modul-inner w-[300px] bg-slate-500 shadow-lg rounded-lg m-auto"></div>
+        </div>
+    </div>
+    
+
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
