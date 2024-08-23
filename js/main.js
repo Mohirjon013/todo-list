@@ -50,6 +50,7 @@ function handleComplatedBtn (id){
 // delete and update
 elLIst.addEventListener("click", function(e) {
     if(e.target.matches(".delet-btn")){
+        elLIst.classList.remove("p-3")
         const findObj = todos.findIndex(item => item.id == e.target.id)
         todos.splice(findObj, 1)
         renderTodos(todos)
